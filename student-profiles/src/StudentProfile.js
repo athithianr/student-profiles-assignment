@@ -26,15 +26,19 @@ const StudentProfile = () => {
             return val;
         }
     }
-    ).map((student, index) => {
-        return <Student student={student}></Student>;
-    });
+    )
+        .map((student, index) => {
+            return <Student student={student}></Student>;
+        });
     useEffect(() => {
         callAPI();
     }, []);
     return (
         <div className="student-list">
             <input id="name-input" type="text" placeholder="Search By Name" onChange={(event) => {
+                setSearchName(event.target.value);
+            }} />
+            <input id="tag-input" type="text" placeholder="Search By Name" onChange={(event) => {
                 setSearchName(event.target.value);
             }} />
             {renderedStudentList}

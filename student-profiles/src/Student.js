@@ -2,16 +2,15 @@ import { useState } from 'react';
 
 const Student = ({ student }) => {
     const [Grades, setGrades] = useState("");
+    const [Tags, setTags] = useState([]);
 
     const grades = student.grades.map((grade, index) => {
-        return <p>Test {index+1}: {grade}%</p>
-    }
+        return <p class="grades">Test {index + 1}: {grade}%</p>
+    },
     );
 
-    const handleGradeDropdown = () =>
-    {
-        if(Grades == "")
-        {
+    const handleGradeDropdown = () => {
+        if (Grades == "") {
             setGrades(grades);
         }
         else {
@@ -38,6 +37,13 @@ const Student = ({ student }) => {
                     <p>Average: {sum / student.grades.length}%</p>
                     <br></br>
                     {Grades}
+                    {Grades !== "" ? Tags : ""}
+                    {Grades !== "" ? <input id="tag-input" type="text" placeholder="Add a tag" onKeyDown={(event) => {
+                        if (event.key === 'Enter') {
+                            setTags(Tags.concat(event.target.value) + "  ")
+                            event.currentTarget.value = ""
+                        }
+                    }} /> : ""}
                 </div>
             </div>
             <div class="third">
