@@ -31,14 +31,22 @@ body {
     display:flex;
     background-color: white;
     border-bottom: 2px solid #F8F8F8;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .left-half {
     flex: 1;
+    /* background-color: red; */
+    width:25%;
+    flex-grow: 0;
+    flex-basis: 20%;
   }
   
   .right-half {
     flex: 1;
+    /* background-color: orange; */
+    flex-grow: 3;
   }
  
 
@@ -47,17 +55,22 @@ body {
     position: relative;
     left: 20px; /* This will move it 20px to the right */
     font-family: 'Courier New', monospace;
+    line-height: 1px;
+    font-size: 20px;
   }
   .right-half h1 {
     text-transform: uppercase;
     text-align: left;
     position: relative;
     white-space: nowrap;
-	font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+	  font-family: Copperplate,Copperplate Gothic Light,fantasy;
+    font-size: 40px;
+    font-weight: bolder;
   }
 
   .container .temp .grades{
     line-height: .3;
+    font-size:17px;
   }
 
 
@@ -67,13 +80,14 @@ body {
     text-align: right;
     padding-right: 10px;
     padding-top: 30px;
+    flex-shrink: 1;
 }
 
 #circle {
     border-radius:50% 50% 50% 50%;  
     border: 2px solid #F8F8F8;
-    width:100px;
-    height:100px;
+    width:150px;
+    height:150px;
     position: relative;
-    top: 20px;
+    top: 30px;
 }
