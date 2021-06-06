@@ -46,6 +46,7 @@ const StudentProfile = () => {
                 if (val.tags[i].toLowerCase().includes(TagName.toLowerCase()))
                     return val;
             }
+            return null;
         }
         else
             return null;
@@ -64,7 +65,7 @@ const StudentProfile = () => {
             <input style={{ fontSize: '18px', padding: '20px 20px 5px 20px' }} id="name-input" type="text" placeholder="Search By name" onChange={(event) => {
                 setSearchName(event.target.value);
             }} />
-            <input style={{ fontSize: '18px', padding: '20px 20px 5px 20px' }} id="tag-input" type="text" placeholder="Search By Tags" onChange={(event) => {
+            <input style={{ fontSize: '18px', padding: '20px 20px 5px 20px' }} id="tag-input" type="text" placeholder="Search By tags" onChange={(event) => {
                 setTagName(event.target.value);
             }} />
             {renderedStudentList}
