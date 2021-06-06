@@ -4,7 +4,7 @@ body {
 
 .student-list {
     text-align: center;
-    width:50%;
+    width:60%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -35,47 +35,46 @@ body {
     flex-direction: row;
 }
 
-.left-half {
+.img-box {
     flex: 1;
-    /* background-color: red; */
     width:25%;
     flex-grow: 0;
     flex-basis: 20%;
   }
   
-  .right-half {
+  .student-info {
     flex: 1;
-    /* background-color: orange; */
     flex-grow: 3;
+    padding-left: 20px;
   }
  
 
-  .right-half p {
+  .student-info p {
     text-align: left;
     position: relative;
     left: 20px; /* This will move it 20px to the right */
     font-family: 'Courier New', monospace;
     line-height: 1px;
-    font-size: 20px;
+    font-size: 18px;
   }
-  .right-half h1 {
+  .student-info h1 {
     text-transform: uppercase;
     text-align: left;
     position: relative;
     white-space: nowrap;
 	  font-family: Copperplate,Copperplate Gothic Light,fantasy;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bolder;
   }
 
-  .container .temp .grades{
+  .container .grades{
     line-height: .3;
     font-size:17px;
   }
 
 
 
-.third{
+.toggle{
     flex:1;
     text-align: right;
     padding-right: 10px;
@@ -86,8 +85,9 @@ body {
 #circle {
     border-radius:50% 50% 50% 50%;  
     border: 2px solid #F8F8F8;
-    width:150px;
-    height:150px;
+    width:125px;
+    height:125px;
     position: relative;
     top: 30px;
+    margin-left: 10px;
 }
